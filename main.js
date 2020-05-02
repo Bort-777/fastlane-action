@@ -90,9 +90,7 @@ function installBundleDependencies(pathToGemFile, customInstallPath) {
 }
 
 function installFastlaneIfNecessary() {
-    if (!shell.which("fastlane")) {
-        installUsingRubyGems("fastlane ~> 2.146.1");
-    }
+    installUsingRubyGems("fastlane ~> 2.146.1");
 }
 
 function installBundlerIfNeeded() {
