@@ -46,15 +46,11 @@ function run() {
 
         const supposedGemfilePath = `${process.cwd()}/Gemfile`;
         let fastlaneCommand;
-        if (fs.existsSync(supposedGemfilePath)) {
-            installBundleDependencies(supposedGemfilePath, bundleInstallPath);
 
-            fastlaneCommand = "bundle exec fastlane";
-        } else {
-            installFastlaneIfNecessary();
+         installFastlaneIfNecessary();
 
-            fastlaneCommand = "fastlane"
-        }
+         fastlaneCommand = "fastlane"
+       
 
         let fastlaneOptions = [];
         for (let optionKey in deserializedOptions) {
